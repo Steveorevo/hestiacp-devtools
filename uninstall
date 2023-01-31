@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Update global bash.bashrc
+sed '/^# begin hestiacp-devtools$/,/^# end hestiacp-devtools$/d' /etc/bash.bashrc > temp.txt && mv temp.txt /etc/bash.bashrc

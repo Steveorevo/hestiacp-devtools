@@ -1,0 +1,15 @@
+#!/bin/bash
+
+############################################
+# Update global bash.bashrc
+############################################
+
+if ! grep -Fxq "# begin hestiacp-devtools" "/etc/bash.bashrc";then
+
+cat <<EOT >> /etc/bash.bashrc
+# begin hestiacp-devtools
+export PATH="\$HOME/.wp-cli:\$HOME/.composer:\$PATH"
+# end hestiacp-devtools
+EOT
+
+fi
