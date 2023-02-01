@@ -13,3 +13,9 @@ export PATH="\$HOME/.wp-cli:\$HOME/.composer:\$PATH"
 EOT
 
 fi
+
+############################################
+# Patch phppgadmin
+############################################
+
+wget -O /usr/share/phppgadmin/classes/database/Connection.php https://raw.githubusercontent.com/Steveorevo/phppgadmin/master/classes/database/Connection.php
